@@ -1,0 +1,35 @@
+{
+  "name": "fantasy-transactions",
+  "version": "0.1.0",
+  "description": "A Fantasy Land compliant Monad for asynchronous transactions",
+  "keywords": ["monad", "asynchronous", "future", "transaction", "rollback", "fantasyland", "fantasy"],
+  "main": "lib/transaction.js",
+  "jsnext:main": "src/transaction.js",
+  "repository": "https://github.com/Avaq/fantasy-transactions.git",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint ./src ./test",
+    "pretest": "npm run lint",
+    "prepublish": "npm run build",
+    "build": "node_modules/.bin/babel src -d lib",
+    "test": "NODE_ENV=test node_modules/.bin/babel-node node_modules/.bin/isparta cover --root ./src --report text --report html test.js"
+  },
+  "author": "Aldwin Vlasblom <aldwin.vlasblom@gmail.com> (https://github.com/Avaq)",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
+    "chai": "^3.4.0",
+    "eslint": "^1.7.3",
+    "glob": "^6.0.2",
+    "isparta": "^4.0.0",
+    "mocha": "^2.3.3",
+    "node-dev": "^2.7.1",
+    "rimraf": "^2.4.3",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0",
+    "supertest": "^1.1.0"
+  }
+}
